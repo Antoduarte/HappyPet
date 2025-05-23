@@ -1,0 +1,65 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      {% block title %}
+        Home
+      {% endblock %}
+    </title>
+    <link rel="icon" type="image/x-icon" href="{% static '/images/favicon.ico' %}" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@adminkit/core@latest/dist/css/app.css" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      {% block navbar %}
+        <aside id="sidebar">
+          <div class="d-flex">
+            <button class="toggle-btn" type="button"><i class="fas fa-paw"></i></button>
+            <div class="sidebar-logo">
+              <a href="/">HappyPet</a>
+            </div>
+          </div>
+          <ul class="sidebar-nav">
+            <li class="sidebar-item">
+              <a href="{% url 'dashboard' %}" class="sidebar-link">
+                <i class="bi bi-house"></i>
+                <span>Inicio</span>
+              </a>
+            </li>
+
+            <li class="sidebar-item">
+              <a href="{% url 'pet_list' %}" class="sidebar-link">
+                <i class="fa-solid fa-bone"></i>
+                <span>Dueños / Mascotas</span>
+              </a>
+            </li>
+          </ul>
+        </aside>
+      {% endblock %}
+
+      <div class="main">
+        {% block page_content %}
+          <div class="text-center">
+            <h1>Hello!! I am Default Page</h1>
+          </div>
+          <p>Default page add content</p>
+        {% endblock %}
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src=" {% static '/js/script.js' %}"></script>
+
+    <div></div>
+  </body>
+
+  <!-- Footer -->
+</html>

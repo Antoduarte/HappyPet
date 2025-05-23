@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block navbar %}
+
+{% endblock %}
+
+{% block page_content %}
+  <div class="welcome-bg">
+    <div class="row h-100 justify-content-center align-items-center">
+      <div class="col-md-4">
+        <div class="card shadow">
+          <div class="card-header">
+            <h4 class="mb-0 text-white text-center">Iniciar Sesión</h4>
+          </div>
+          <div class="card-body">
+            <form method="post">
+              {% csrf_token %}
+
+              {% if form.errors %}
+                <div class="alert alert-danger">Usuario o contraseña incorrectos. Intenta nuevamente.</div>
+              {% endif %}
+
+              <div class="mb-3">
+                <label for="id_username" class="form-label">Usuario</label>
+                <input type="text" name="username" id="id_username" class="form-control" required placeholder="Nombre de usuario" />
+              </div>
+
+              <div class="mb-3">
+                <label for="id_password" class="form-label">Contraseña</label>
+                <input type="password" name="password" id="id_password" class="form-control" required placeholder="Contraseña" />
+              </div>
+
+              <button type="submit" class="btn btn-vet px-4 py-2 w-100">Ingresar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .welcome-bg {
+      min-height: 100vh;
+    }
+    .btn-vet {
+      background-color: #213448;
+      color: white;
+      transition: all 0.3s;
+    }
+    .card-header {
+      background-color: #213448;
+    }
+    
+    .btn-vet:hover {
+      background-color: rgb(26, 62, 101);
+      transform: translateY(-2px);
+      color: white;
+    }
+  </style>
+{% endblock %}

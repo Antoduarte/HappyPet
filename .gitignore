@@ -1,0 +1,7 @@
+*.pyc
+*.cpython-311.pyc
+
+
+media/
+.env
+db.sqlite3
