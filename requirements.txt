@@ -22,7 +22,7 @@ lxml==5.4.0
 oscrypto==1.3.0
 packaging==25.0
 pillow==10.4.0
-psycopg2-binary==2.9.10
+psycopg2-binary==2.9.5
 pycparser==2.22
 pydyf==0.11.0
 pyHanko==0.26.0
