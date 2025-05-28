@@ -50,7 +50,7 @@
                   <div class="prescription-box">
                     <h6 class="section-title"><i class="fas fa-pills me-2"></i>Medicamentos</h6>
                     {% if record.prescribed_meds %}
-                      <div class="alert alert-warning">{{ record.prescribed_meds|linebreaks }}</div>
+                      <div class="treatment-content p-3 bg-light rounded">{{ record.prescribed_meds|linebreaks }}</div>
                     {% else %}
                       <div class="alert alert-light">No se prescribieron medicamentos</div>
                     {% endif %}
@@ -96,9 +96,9 @@
 
           <!-- Next Checkup -->
           {% if record.next_checkup %}
-            <div class="card shadow-sm mb-4 border-warning">
-              <div class="card-header bg-warning text-white">
-                <h5 class="mb-0">
+            <div class="card shadow-sm mb-4">
+              <div class="card-header bg-secondary-color">
+                <h5 class="mb-0 text-white">
                   <i class="fas fa-calendar-check me-2"></i>
                   Próximo Control
                 </h5>
@@ -170,7 +170,7 @@
                 <div class="d-flex gap-2 flex-wrap mb-4">
                   {{ attachment_form.file }}
                   {{ attachment_form.description }}
-                  <button type="submit" name="submit_attachment" class="btn btn-secondary mt-2">Adjuntar Archivo</button>
+                  <button type="submit" name="submit_attachment" class="btn btn-primary mt-2">Adjuntar Archivo</button>
                 </div>
               </form>
               {% for attachment in attachments %}
