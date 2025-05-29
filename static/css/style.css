@@ -452,9 +452,7 @@ td a {
   .profile-header {
     text-align: center;
   }
-  .profile-avatar {
-    margin: 0 auto 20px;
-  }
+
   .profile-header .text-end {
     text-align: center !important;
     margin-top: 20px;
@@ -559,11 +557,88 @@ td a {
   text-align: center;
   padding: 3rem 0;
 }
-
 .btn-primary:focus,
 .btn-primary:active,
-.btn-primary:active:focus:not(:disabled):not(.disabled),
-.btn:focus,
-.btn:active {
+.btn-primary:active:focus:not(:disabled):not(.disabled) {
   background-color: var(--primary-color);
+}
+
+@media screen and (max-width: 520px) {
+  h1 {
+    font-size: 1.2rem !important;
+  }
+  h4,
+  h5 {
+    font-size: 0.8rem !important;
+  }
+  h6,
+  .detail-item i,
+  li,
+  .badge,
+  .alert,
+  .lead {
+    font-size: 0.7rem !important;
+  }
+  .badge,
+  .alert {
+    font-weight: 400;
+  }
+  #sidebar {
+    width: 45px;
+    min-width: 45px;
+  }
+  .sidebar-nav {
+    padding: 1.5rem 0;
+  }
+  .sidebar-link i {
+    font-size: 0.9rem;
+  }
+  a.sidebar-link {
+    padding: 0.625rem 0.85rem;
+  }
+  .btn,
+  .form-control,
+  .form-labe,
+  p {
+    font-size: 0.65rem;
+  }
+  .form-control {
+    padding: 10px;
+  }
+  .form-group {
+    margin-bottom: 5px;
+  }
+  .table > :not(caption) > * > * {
+    padding: 8px;
+  }
+  th {
+    min-width: 85px;
+  }
+  th,
+  td,
+  td a {
+    font-size: 0.6rem;
+    font-weight: 400;
+  }
+  .pet-profile .pet-avatar,
+  .profile-avatar {
+    width: 70px;
+    height: 70px;
+  }
+  .pet-profile .avatar-fallback,
+  .avatar-initials {
+    font-size: 2.2rem;
+  }
+  .owner-detail .card-header {
+    padding-bottom: 0;
+  }
+  .timeline-header {
+    padding: 0.7rem;
+  }
+  .diagnosis-content,
+  .treatment-content,
+  .medical-meta {
+    min-height: 100px;
+    margin-bottom: 0.6rem;
+  }
 }

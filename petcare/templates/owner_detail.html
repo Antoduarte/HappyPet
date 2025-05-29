@@ -7,7 +7,7 @@
           <div class="d-flex align-items-center gap-3">
             <a href="{% url 'pet_list' %}" class="btn btn-outline-light"><i class="fas fa-arrow-left"></i></a>
             <div class="profile-avatar shadow">
-              <div class="avatar-initials rounded-circle">{{ owner.first_name|first|upper }}{{ owner.last_name|first|upper }}</div>
+              <div class="avatar-initials rounded-circle text-dark">{{ owner.first_name|first|upper }}{{ owner.last_name|first|upper }}</div>
             </div>
             <div class="text-white">
               <h1 class="text-white mb-1">{{ owner.first_name }} {{ owner.last_name }}</h1>
